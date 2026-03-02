@@ -700,7 +700,6 @@ def main() -> None:
         webhook_url=f"{WEBHOOK_URL.rstrip('/')}/{WEBHOOK_PATH}",
         allowed_updates=Update.ALL_TYPES,
         drop_pending_updates=True,          # Ignore queued msgs from downtime
-        secret_token=BOT_TOKEN[:32],        # Extra webhook security layer
     )
 
 
