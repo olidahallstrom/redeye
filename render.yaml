@@ -12,7 +12,7 @@ services:
       - key: 8440940013:AAFX8fxLTtZ2SUpc-KenhEdUrE2RRced58o
         sync: false           # Set manually in Render dashboard (secret)
 
-      - key: WEBHOOK_URL
+      - key: https://redeye-zb7j.onrender.com
         sync: false           # e.g. https://red-eye-cookies-bot.onrender.com
 
       - key: 7616147846
