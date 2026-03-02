@@ -3,7 +3,16 @@
 Red Eye Cookies Bot
 Optimized for Render.com deployment using Webhooks
 """
+import asyncio
+import sys
 
+# Fix for Python 3.10+ asyncio behavior
+if sys.version_info >= (3, 10):
+    try:
+        asyncio.get_event_loop()
+    except RuntimeError:
+        asyncio.set_event_loop(asyncio.new_event_loop())
+        
 import os
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
