@@ -2,6 +2,7 @@ services:
   - type: web
     name: red-eye-cookies-bot
     env: python
+    pythonVersion: "3.11.9"
     region: oregon           # Pick closest to your users
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
