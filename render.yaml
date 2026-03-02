@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: red-eye-cookies-bot
+    env: python
+    region: oregon           # Pick closest to your users
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /        # Bot's built-in health endpoint
+
+    envVars:
+      - key: 8440940013:AAFX8fxLTtZ2SUpc-KenhEdUrE2RRced58o
+        sync: false           # Set manually in Render dashboard (secret)
+
+      - key: WEBHOOK_URL
+        sync: false           # e.g. https://red-eye-cookies-bot.onrender.com
+
+      - key: 7616147846
+        sync: false           # Your numeric Telegram ID
+
+      - key: SUPPORT_UN
+        value: "@your_support"
+
+      - key: CHANNEL_URL
+        value: "https://t.me/your_channel"
+
+      - key: CRYPTO_ADDR
+        sync: false           # BTC address (secret)
+
+      - key: USDT_ADDR
+        sync: false           # USDT TRC20 address (secret)
